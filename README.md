@@ -427,6 +427,6 @@ ie.
 
 [![Initialize](https://jamesrobinsonvfx.com/assets/projects/houdini-package-template/images//initialize.gif)](https://jamesrobinsonvfx.com/assets/projects/houdini-package-template/images//initialize.gif)
 
-You could totally just manually hunt for everything called `houdini_package_template`, and the tags `{% raw %}{% package_name %}{% endraw %}`, `{% raw %}{% Package Title
-%}{% endraw %}` and `{% raw %}{% PACKAGE_NAME_UPPER %}{% endraw %}`, and replace them manually. Or you can
+You could totally just manually hunt for everything called `houdini_package_template`, and the tags `{% package_name %}`, `{% Package Title
+%}` and `{% PACKAGE_NAME_UPPER %}`, and replace them manually. Or you can
 use the script (just use the script).
