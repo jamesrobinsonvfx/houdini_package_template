@@ -1,0 +1,11 @@
+{
+    "enable": true,
+    "path": [
+        {
+            "houdini_version >= '18.0' and houdini_version < '18.5'": "$HOUDINI_PACKAGE_PATH/{% package_name %}/houdini18.0"
+        },
+        {
+            "houdini_version >= '18.5' and houdini_version < '19.0'": "$HOUDINI_PACKAGE_PATH/{% package_name %}/houdini18.5"
+        }
+    ]
+}

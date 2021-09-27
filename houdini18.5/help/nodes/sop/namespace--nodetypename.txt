@@ -1,0 +1,19 @@
+= Node Type Name =
+#icon: MISC/donut.svg
+
+== Overview ==
+
+
+@inputs
+
+@outputs
+
+@parameters
+
+Pameter 1:
+	#id: parm1
+	This is a very important parameter that does many things.
+
+@related
+* [Node:sop/resample]
+* [Node:sop/mynamespace--otherasset]
