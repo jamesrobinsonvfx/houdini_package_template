@@ -21,6 +21,7 @@ Template repo for creating simple (or not so simple) Houdini Packages.
     - [MainMenuCommon.xml](#mainmenucommonxml)
     - [toolbar](#toolbar)
     - [help/nodes](#helpnodes)
+    - [`initialize.py`](#initializepy)
 
 
 ## Overview
@@ -40,12 +41,7 @@ folders have been included as a good start.
     git clone git@github.com:jamesrobinsonvfx/demo_tool.git
     ```
 
-3. Open the repository and run `./initialize.py` ([See below for extra use instructions]())
-    > This script sets the package name and title in files all around the package.
-    > You could totally just manually hunt for everything called
-    > `houdini_package_template`, and the tags `{% package_name %}`, `{% Package Title
-    > %}` and `{% PACKAGE_NAME_UPPER %}`, and replace them manually. Or you can
-    > use the script (just use the script).
+3. Open the repository and run `./initialize.py` ([See below for extra use instructions](#initializepy))
 
 4. Start building your tool!
 
@@ -85,7 +81,7 @@ There's a multitude of ways you can configure your packages to load. I highly re
 [Houdini Packages documentation](https://www.sidefx.com/docs/houdini/ref/plugins.html) for more detailed info.
 
 Outlined below are two favorite ways of setting up and loading packages. Package
-`.json` files can be placed in any `packages` folder within a [Houdini Location]().
+`.json` files can be placed in any `packages` folder within a [Houdini Location](https://www.sidefx.com/docs/houdini/basics/config.html#path).
 For studio-wide tools, that's usually best located at your facility's `$HSITE`.
 For single users you'll probably want to use your `$HOUDINI_USER_PREF_DIR` if
 you don't have `$HSITE` set up. I will be using `$HOUDINI_USER_PREF_DIR` to make
@@ -402,3 +398,35 @@ to store custom help card docs, as well as a basic starting template.
 > ```
 > jamesr--inspectnodedata.txt
 > ```
+
+### `initialize.py`
+
+This script runs a short command-line wizard that lets you set the package name
+and title. It should be run before making any additions/changes to the template.
+
+**macOS / Linux**
+```
+./initialize.py
+```
+
+**Windows**
+```
+python initialize.py
+```
+
+If you prefer to do it in one line, you can add the package name and title as
+command-line arguments:
+
+```
+./initialize.py [title] [package_name]
+```
+ie.
+```
+./initialize.py "Demo Tool" demo_tool
+```
+
+[![Initialize](https://jamesrobinsonvfx.com/assets/projects/houdini-package-template/images//initialize.gif)](https://jamesrobinsonvfx.com/assets/projects/houdini-package-template/images//initialize.gif)
+
+You could totally just manually hunt for everything called `houdini_package_template`, and the tags `{% raw %}{% package_name %}{% endraw %}`, `{% raw %}{% Package Title
+%}{% endraw %}` and `{% raw %}{% PACKAGE_NAME_UPPER %}{% endraw %}`, and replace them manually. Or you can
+use the script (just use the script).
