@@ -43,8 +43,8 @@ folders have been included as a good start.
 3. Open the repository and run `./initialize.py` ([See below for extra use instructions]())
     > This script sets the package name and title in files all around the package.
     > You could totally just manually hunt for everything called
-    > `houdini_package_template`, and the tags `{% raw %}{% package_name %}{% endraw %}`, `{% raw %}{% Package Title
-    > %}{% endraw %}` and `{% raw %}{% PACKAGE_NAME_UPPER %}{% endraw %}`, and replace them manually. Or you can
+    > `houdini_package_template`, and the tags `{% package_name %}`, `{% Package Title
+    > %}` and `{% PACKAGE_NAME_UPPER %}`, and replace them manually. Or you can
     > use the script (just use the script).
 
 4. Start building your tool!
