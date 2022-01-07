@@ -6,6 +6,9 @@
         },
         {
             "houdini_version >= '18.5' and houdini_version < '19.0'": "$HOUDINI_PACKAGE_PATH/{% package_name %}/houdini18.5"
+        },
+        {
+            "houdini_version >= '19.0' and houdini_version < '19.5'": "$HOUDINI_PACKAGE_PATH/{% package_name %}/houdini19.0"
         }
     ]
 }
