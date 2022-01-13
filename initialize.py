@@ -199,10 +199,17 @@ def main():
         # Rename the file if necessary
         rename(fname, package_name)
 
-    # Rename any dirs
+    # Rename any dirs and cleanup boilerplate READMEs
     for dname in set(all_dirs):
+        if fnmatch.fnmatch(dname, "*houdini*/otls"):
+            try:
+                print("Removing placeholder at {0}/README.md".format(dname))
+                os.remove(os.path.join(dname, "README.md"))
+            except OSError:
+                print("Unable to remove {0}/README.md".format(dname))
+                pass
         rename(dname, package_name)
-    print("Done.")
+    print("\033[0;37;42m" + "Done." + "\033[0m")
 
 
 if __name__ == "__main__":
