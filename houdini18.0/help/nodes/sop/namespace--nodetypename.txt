@@ -10,7 +10,7 @@
 
 @parameters
 
-Pameter 1:
+Parameter 1:
 	#id: parm1
 	This is a very important parameter that does many things.
 
